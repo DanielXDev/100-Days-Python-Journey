@@ -21,7 +21,7 @@
   -Loops, Functions & Karel → Implementing for and while loops, writing functions, and an intro to Karel (Python for beginners).
   
   -Function Parameters → Understanding function arguments, keyword arguments, and default parameters.
-  
+   
   -Dictionaries & Nesting → Creating and manipulating dictionaries, nesting lists and dictionaries for structured data.
   
   -Returning Function Outputs → Understanding return statements, function outputs, and using return values in programs.
