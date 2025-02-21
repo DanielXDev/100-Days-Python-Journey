@@ -1,0 +1,19 @@
+Project Summary: Classic Pong Game 🏓
+This project is a Python recreation of the classic Pong game using the Turtle graphics library. Two players control paddles to keep the ball in play, and the game tracks scores based on missed shots.
+
+Key Features:
+✅ OOP-Based Design → Uses Paddle, Ball, and Scoreboard classes for structured game logic.
+✅ Two-Player Mode → Controls:
+-Right Paddle → Arrow keys (Up and Down)
+-Left Paddle → A (up) and Z (down)
+✅ Ball Physics → Detects wall collisions, paddle bounces, and missed shots.
+✅ Speed Adjustment → The ball accelerates after every paddle hit for increasing difficulty.
+✅ Scorekeeping System → Updates and displays scores when a player misses.
+This project demonstrates OOP, collision detection, keyboard event handling, and game physics. Future improvements could include AI-controlled opponents, sound effects, or a graphical UI upgrade. 🚀
+
+
+
+
+
+
+

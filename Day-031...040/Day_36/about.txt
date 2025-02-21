@@ -1,0 +1,21 @@
+Stock Market Alert & News Update System
+This project monitors stock price fluctuations and provides timely news updates through SMS alerts and a Streamlit-based dashboard.
+
+Main Code: Stock & News SMS Alert System
+📌 How It Works:
+1️⃣ Fetches Stock Data: Uses Alpha Vantage API to check daily stock prices for a user-specified company.
+2️⃣ Calculates Price Change: Compares the latest closing price with the previous day’s closing price.
+3️⃣ Determines Market Trend: If the price increases, it adds 📈🆙; if it decreases, it shows 🔻.
+4️⃣ Fetches News Articles: Queries the News API for the latest articles about the company.
+5️⃣ Sends SMS Alerts: Uses Twilio to send stock updates and relevant news headlines to the user.
+
+🔹 Impact: Provides real-time stock monitoring and alerts users about significant price movements and news.
+
+Recent Update: Added a Streamlit Dashboard
+The latest update integrates a Streamlit-based dashboard, allowing users to:
+✅ Select a stock from a predefined list (TSLA, AAPL, AMZN).
+✅ View real-time stock performance, including price changes and trends.
+✅ Read the latest news related to the selected company.
+✅ Get visual feedback on stock movements (green for gains, red for losses).
+
+🔹 Impact: This enhances usability by providing a user-friendly, interactive platform instead of relying solely on SMS alerts.

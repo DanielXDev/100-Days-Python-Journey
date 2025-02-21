@@ -1,0 +1,11 @@
+Project Summary: Password Manager 🔐
+This Tkinter-based Password Manager helps users generate, store, and retrieve passwords securely.
+
+Key Features:
+✅ Password Generator → Creates strong passwords using random letters, numbers, and symbols.
+✅ Clipboard Copying → Automatically copies generated passwords for easy pasting.
+✅ Save & Store Passwords → Saves credentials in a JSON file for permanent storage.
+✅ Search Functionality → Allows users to retrieve saved credentials for a specific website.
+✅ Error Handling → Includes alerts for missing fields, file errors, and missing records.
+
+This project is a solid beginner-friendly implementation of data handling, UI development, and security-conscious coding. 🚀

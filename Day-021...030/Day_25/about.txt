@@ -1,0 +1,11 @@
+Project Summary: U.S. States Guessing Game📍
+This project is a Python-based geography quiz that challenges users to name all 50 U.S. states. Using turtle graphics and pandas, it provides an interactive and educational experience.
+
+Key Features:
+✅ Graphical Map Interface → Displays a U.S. map using turtle graphics.
+✅ User Input & Validation → Players type state names; correct guesses appear on the map.
+✅ Score Tracking → Displays the number of correctly guessed states.
+✅ Case-Insensitive Matching → Allows input in any capitalization format.
+✅ Progress Saving → If the player quits, unguessed states are saved in states_to_learn.csv.
+
+This project demonstrates event-driven programming, GUI handling with turtle, and data manipulation with pandas. Future improvements could include timed challenges, hints, or multiple difficulty levels. 🚀

@@ -1,0 +1,11 @@
+🚀 ISS Tracker & Notifier 🌍
+This script automatically tracks the ISS (International Space Station) and notifies you via email when it's close to your location and visible in the night sky.
+
+How It Works:
+✅ Fetches ISS Position → Uses http://api.open-notify.org/iss-now.json to get live ISS coordinates.
+✅ Checks Visibility → Calls https://api.sunrise-sunset.org/json to determine day or night.
+✅ Compares Your Location → ISS must be within ±5° latitude & longitude.
+✅ Sends an Email Alert → If ISS is nearby and it's dark, you get an email notification.
+✅ Runs Every 60 Seconds → Uses time.sleep(60) for continuous monitoring.
+
+This is an awesome automation project combining API integration, email notifications, and real-time tracking! 🚀✨

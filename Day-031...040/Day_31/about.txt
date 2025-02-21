@@ -1,0 +1,17 @@
+Flashcard Learning App 📚
+This Tkinter-based Flashcard App helps users learn French words through interactive flashcards.
+
+Key Features:
+✅ Displays Random French Words → Users see a new word from a CSV file.
+✅ Auto Flip Feature → After 5 seconds, the card flips to show the English translation.
+✅ User Progress Tracking → Clicking ✅ removes a known word from the list, while ❌ keeps it.
+✅ CSV Integration → Reads words from "french_words.csv", allowing easy modification.
+✅ Minimalist UI → Uses canvas for graphics, buttons for interactions, and a clean design.
+
+Possible Enhancements:
+🔹 Save Progress → Store remaining words in a file to resume later.
+🔹 Custom Word Lists → Allow users to upload their own CSV files.
+🔹 Audio Pronunciation → Add speech synthesis for correct pronunciation.
+🔹 Leaderboard → Gamify learning by tracking progress.
+
+This beginner-friendly project combines file handling, UI development, and user interaction! 🚀

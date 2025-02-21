@@ -1,0 +1,12 @@
+Project Summary: Classic Snake Game 🐍
+This project is a Python-based Snake Game built using the Turtle graphics library. It follows the classic arcade-style gameplay where the player controls a snake that grows longer as it consumes food, with the objective of achieving the highest score without colliding with walls or itself.
+
+Key Features:
+✅ OOP-Based Game Design → Uses Snake, Food, and Score classes for modularity.
+✅ Keyboard Controls → Arrow key inputs allow movement in four directions.
+✅ Food Collision Detection → The snake eats food, extends its length, and increases the score.
+✅ Wall Collision Handling → The game resets when the snake hits the wall.
+✅ Self-Collision Detection → The snake resets upon colliding with its own body.
+✅ Score Management → Tracks and displays the current and highest score.
+
+This project showcases OOP principles, event-driven programming, and game logic implementation.

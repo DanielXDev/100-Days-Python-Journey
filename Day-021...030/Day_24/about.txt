@@ -1,0 +1,10 @@
+Project Summary: Automated Invitation Letter Generator 📜✉️
+This project is a Python-based automation tool that generates personalized invitation letters by replacing placeholders with actual names from a list.
+
+Key Features:
+✅ File Handling → Reads names from invited_names.txt and a template from starting_letter.txt.
+✅ Placeholder Replacement → Dynamically replaces [name] with each invitee’s actual name.
+✅ Automated Letter Generation → Saves personalized letters as .docx files in the ReadyToSend folder.
+✅ Looping & String Manipulation → Iterates through all names and formats each letter correctly.
+
+This project demonstrates file I/O, string manipulation, and automation techniques. Future improvements could include email integration, PDF export, or bulk message scheduling. 🚀

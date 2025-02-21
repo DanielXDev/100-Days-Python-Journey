@@ -1,0 +1,16 @@
+Coding Activity Tracker with Pixela
+This script automates the tracking of coding hours using the Pixela API, which allows users to create and update visual graphs for their daily progress.
+
+How It Works:
+1️⃣ User Registration (if not already registered):
+Defines a user profile on Pixela with a username and API token.
+
+2️⃣ Graph Creation (if not already created):
+Generates a graph named "Coding Graph" to track daily coding hours.
+Uses hours as the unit and momiji (red) as the color.
+
+3️⃣ Daily Pixel Update:
+Retrieves the current date and logs 18 hours of coding for that day.
+Sends a PUT request to update the graph with the new data.
+
+🔹 Impact: Provides a visual representation of coding consistency, helping developers stay motivated and track progress effortlessly.

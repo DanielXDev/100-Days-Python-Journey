@@ -1,0 +1,11 @@
+Project Summary: OOP-Based Quiz Game 🎯
+This project is a console-based quiz application that uses Object-Oriented Programming (OOP) to structure and manage a series of quiz questions. The game tests the user's knowledge by presenting questions one by one while tracking their score.
+
+Key Features:
+✅ Custom Question Class → Encapsulates question text and answer storage.
+✅ Quiz Engine (QuizBrain) → Handles question flow, user input, and scorekeeping.
+✅ Dynamic Question Bank → Populates questions from an external data source (question_data).
+✅ User Interaction → Asks questions sequentially and validates user responses.
+✅ Game Completion Message → Displays the final score at the end of the quiz.
+
+This project effectively demonstrates OOP principles, such as class design, instance creation, data encapsulation, and method execution.

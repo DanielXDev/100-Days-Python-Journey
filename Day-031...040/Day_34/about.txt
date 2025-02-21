@@ -1,0 +1,10 @@
+🚀 Python Quizzler App (Tkinter & API-Based Trivia Game)
+This is a Tkinter-based quiz app that fetches True/False questions from the Open Trivia Database API and presents them in a GUI format.
+
+✨ Features:
+✔️ Live Questions → Uses requests to fetch real-time quiz questions.
+✔️ OOP Structure → Organized into Question, QuizBrain, and UserInterface classes.
+✔️ Graphical Interface (GUI) → Built with Tkinter for an interactive experience.
+✔️ Score Tracking → Updates live score in the UI.
+✔️ Visual Feedback → Background color changes to green (correct) or red (wrong).
+✔️ Auto-Next Question → Questions automatically change after 1 second.

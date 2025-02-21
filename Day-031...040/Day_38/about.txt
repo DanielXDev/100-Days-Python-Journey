@@ -1,0 +1,23 @@
+🏋️‍♂️ Automated Workout Tracker 📊
+This script automates tracking workouts, calorie burns, and logs them into a Google Spreadsheet using Nutritionix API and Sheety API.
+
+How It Works:
+1️⃣ User Input:
+Asks the user, "What exercise did you do today?"
+
+2️⃣ Exercise Data Retrieval:
+Sends the input to the Nutritionix API, which returns details like:
+Exercise name
+Duration (minutes)
+Calories burned
+
+3️⃣ Logging the Workout:
+Stores the data in a Google Spreadsheet using the Sheety API.
+Records:
+Date 🗓️
+Time ⏰
+Exercise 🏋️‍♂️
+Duration ⏳
+Calories Burned 🔥
+
+🔹 Impact: Provides an effortless way to track workouts and calorie expenditure, helping users stay consistent with their fitness goals!

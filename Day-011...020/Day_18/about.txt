@@ -1,0 +1,11 @@
+Project Summary: Hirst Painting Dot Art Generator 🎨
+This project is a Python-based digital painting program that recreates the Hirst dot painting style using the Turtle graphics library. It generates a grid of randomly colored dots, simulating the iconic abstract artwork style.
+
+Key Features:
+✅ Turtle Graphics Implementation → Uses the turtle module to draw dots dynamically.
+✅ Randomized Color Selection → Selects colors from a predefined palette for variety.
+✅ Efficient Grid Drawing → Automates dot placement using loops and coordinate adjustments.
+✅ Speed Optimization → Implements speed("fastest") to ensure smooth rendering.
+✅ Interactive Display → Keeps the drawing open until the user clicks to exit.
+
+This project demonstrates looping, coordinate manipulation, functions, and Turtle graphics.

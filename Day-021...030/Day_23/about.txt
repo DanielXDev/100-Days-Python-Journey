@@ -1,0 +1,11 @@
+Project Summary: Turtle Crossing Game 🐢🚗
+This project is a Python-based arcade game inspired by the classic Frogger. The player controls a turtle, navigating across a road filled with moving cars while avoiding collisions.
+
+Key Features:
+✅ OOP-Based Design → Uses Player, CarManager, and Notify classes for modular structure.
+✅ Car Movement System → Randomly generates and moves cars at increasing speeds.
+✅ Collision Detection → Ends the game if the turtle collides with a car.
+✅ Level Progression → When the player reaches the top, cars speed up, increasing difficulty.
+✅ Game Over Notification → Displays a message when the player loses.
+
+This project demonstrates OOP principles, event handling, collision detection, and dynamic difficulty scaling.

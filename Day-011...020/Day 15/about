@@ -1,0 +1,12 @@
+Project Summary: Coffee Machine Simulation ☕
+This project is a console-based coffee machine simulator that allows users to order espresso, latte, or cappuccino. It manages ingredients, processes payments, and ensures smooth operation with various functionalities.
+
+Key Features:
+✅ User Input System → Asks the user for their coffee choice (espresso, latte, cappuccino)
+✅ Resource Management → Checks if enough ingredients are available before making a coffee
+✅ Coin Processing → Accepts payments in pennies, nickels, dimes, and quarters
+✅ Transaction Handling → Ensures the user pays enough and provides change if necessary
+✅ Machine Report → Displays remaining resources and total earnings when requested
+✅ Turn-Off Command → Allows the user to shut down the machine
+
+This project demonstrates Python fundamentals, including loops, functions, dictionaries, conditionals, and input handling. 

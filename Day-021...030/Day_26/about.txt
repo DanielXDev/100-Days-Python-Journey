@@ -1,0 +1,11 @@
+Project Summary: NATO Phonetic Alphabet Converter 🔤📖
+This Python project converts user-inputted names into their NATO phonetic alphabet equivalent. It uses pandas for handling the phonetic alphabet dataset and dictionary comprehensions for fast lookups.
+
+Key Features:
+✅ CSV Data Handling → Reads NATO phonetic alphabet data using pandas.
+✅ Dictionary Comprehension → Maps letters to phonetic codes efficiently.
+✅ User Input Handling → Accepts a name and converts each letter to its phonetic code.
+✅ Error Handling → Ensures only alphabetic characters are processed.
+✅ Recursive Prompting → If an invalid character is entered, the user is prompted again.
+
+This project is a great beginner-friendly exercise in data handling, dictionary comprehension, and user interaction. Future improvements could include support for full sentences, GUI integration, or audio pronunciation playback. 🚀

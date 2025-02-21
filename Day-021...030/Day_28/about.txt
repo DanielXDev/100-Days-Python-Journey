@@ -1,0 +1,16 @@
+Project Summary: Pomodoro Timer ⏳🍅
+This Tkinter-based Pomodoro Timer helps users manage their work sessions effectively using the Pomodoro technique (25-minute work intervals with short and long breaks).
+
+Key Features:
+✅ Work & Break Timer → Automatically switches between Work (25 min), Short Break (5 min), and Long Break (20 min).
+✅ Visual Countdown → Displays a digital timer on a Tomato-themed UI.
+✅ Checkmarks for Progress → Updates checkmarks (✔) after completed work sessions.
+✅ Start & Restart Buttons → Start a new session or reset the timer anytime.
+✅ Smooth Countdown Mechanism → Uses window.after() for accurate timing updates.
+
+Possible Enhancements:
+🔹 Sound Notifications → Play a sound when a session ends.
+🔹 Custom Work/Break Durations → Allow users to set their own time intervals.
+🔹 Progress Tracking → Save session data to a file for productivity analysis.
+
+This project demonstrates Python’s Tkinter capabilities in creating a practical productivity tool with an intuitive user interface. 🚀

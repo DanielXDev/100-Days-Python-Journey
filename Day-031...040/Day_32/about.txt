@@ -1,0 +1,12 @@
+Automated Birthday Email Sender 🎉
+This script automatically sends personalized birthday emails based on data from birthdays.csv.
+
+How It Works:
+✅ Reads Birthdays → Extracts names & emails from birthdays.csv.
+✅ Checks Today's Date → Matches birthdays with the current date.
+✅ Chooses a Random Letter → Picks from 3 templates in letter_templates/.
+✅ Personalizes the Letter → Replaces [NAME] with the recipient’s name.
+✅ Sends an Email → Uses SMTP with Gmail credentials from .env file.
+
+
+This is a great project for learning automation, file handling, and SMTP email integration! 🚀

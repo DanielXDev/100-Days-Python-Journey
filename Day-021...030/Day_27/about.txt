@@ -1,0 +1,10 @@
+Project Summary: Miles to Kilometers Converter 📏➡️📐
+This Tkinter-based GUI application converts miles to kilometers with a simple user-friendly interface.
+
+Key Features:
+✅ Graphical User Interface (GUI) → Built using Tkinter with labels, buttons, and input fields.
+✅ Live Conversion → Converts miles to kilometers upon button click (1 mile = 1.609 km).
+✅ Grid Layout System → Properly structured UI elements using grid().
+✅ Input Validation → Ensures user input is processed correctly.
+
+This is a beginner-friendly GUI project, showcasing the power of Tkinter for interactive applications.

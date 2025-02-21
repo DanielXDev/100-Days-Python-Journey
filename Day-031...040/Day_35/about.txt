@@ -1,0 +1,7 @@
+Weather Alert System with OpenWeather and Twilio
+This Python script fetches weather forecast data from OpenWeather's API and checks for rain within the next four forecasted time slots. If precipitation is detected (weather ID < 700), it sends an SMS alert via Twilio, advising the user to carry an umbrella. Otherwise, it prints a message indicating clear weather.
+
+Key Features:
+✅ Uses environment variables for API security.
+✅ Sends SMS notifications via Twilio.
+✅ Fetches short-term weather forecasts (next few hours).
