@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 :: Define the repository name
-set "REPO_NAME=100-Day-Python-Journey"
+set "REPO_NAME=100-Days-Python-Journey"
 
 :: Create the repository folder
 mkdir %REPO_NAME%
