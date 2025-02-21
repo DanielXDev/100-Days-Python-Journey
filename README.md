@@ -12,6 +12,7 @@
   **📌 Learning Path **
   
   🔹 Days 1-14 → Beginner Level (Fundamentals, syntax, data types, loops, functions, etc.)
+  
   -Variables, Data Types & Manipulation → Understanding variables, primitive data types, type conversion, and string manipulation.
   
   -Control Flow & Logical Operators → Implementing if, elif, and else statements, comparison operators, and logical operators.
@@ -31,6 +32,7 @@
   -Debugging & Fixing Errors → Identifying and fixing syntax, logic, and runtime errors using debugging techniques.
   
   🔹 Days 15-31 → Intermediate Level
+  
   -Object-Oriented Programming (OOP) Essentials:
   Understanding classes, objects, and instances
   Managing object states and attributes
@@ -57,6 +59,7 @@
   Iterating and transforming data effectively
   
   🔹 Days 32-38 → Intermediate+ Level
+  
   -Email Automation & DateTime
   Sending emails using SMTP (smtplib)
   Working with datetime for scheduling and timestamps
