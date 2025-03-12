@@ -1,0 +1,22 @@
+📌 Billboard to Spotify Playlist Automation 🎵
+
+This script automates the creation of a Spotify playlist based on the Billboard charts for a specified date. It scrapes song rankings from Billboard and adds them to a newly created private playlist on Spotify.
+
+🚀 Features:
+-Scrapes Billboard Hot 100 and Billboard U.S. Afrobeats charts.
+-Uses BeautifulSoup for web scraping.
+-Integrates with Spotify API to search and add songs.
+-Automatically creates and updates Spotify playlists.
+
+🔧 Tech Stack:
+-Python 🐍
+-BeautifulSoup (Web Scraping)
+-Spotipy (Spotify API)
+-Requests (HTTP Requests)
+-dotenv (Environment Variables)
+
+📌 How to Use:
+Clone the repository.
+Set up a .env file with your Spotify API credentials.
+Run the script and enter a date (YYYY-MM-DD).
+Enjoy your personalized Spotify playlist! 🎶

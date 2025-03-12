@@ -1,0 +1,11 @@
+Automated LinkedIn Job Application Script
+This script leverages Selenium to streamline the job application process on LinkedIn. It automates user authentication, navigates through job listings, and efficiently submits applications using the Easy Apply feature.
+
+Key Features:
+-Automated Login – Securely signs in using stored credentials from environment variables.
+-Job Listing Navigation – Extracts and iterates through available job postings.
+-Easy Apply Automation – Auto-fills required fields (e.g., phone number) and submits applications.
+-Popup Handling – Detects and dismisses modal dialogs (e.g., "Discard" button) to ensure smooth execution.
+-Robust Error Handling – Implements a safe_click() function to verify element availability before interaction, enhancing script stability.
+
+This script is ideal for professionals looking to automate their job search process efficiently and at scale. 🚀

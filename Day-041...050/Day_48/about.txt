@@ -1,0 +1,24 @@
+Brief Summary of Scripts in the Folder
+This folder contains multiple Selenium-based automation scripts, each performing different tasks on various websites:
+
+1.Cookie Clicker Bot 🍪
+-Automates the Cookie Clicker game.
+-Clicks the cookie rapidly and buys upgrades to maximize cookies per second.
+
+2.Amazon Price Scraper 🛒
+-Scrapes the price of a specific Amazon product.
+-Attempts to bypass CAPTCHA by clicking "Try different image" before extracting the price.
+
+3.Python.org Event Scraper 📅
+-Extracts and prints upcoming events from Python.org.
+-Stores event dates and titles in a dictionary for easy reference.
+
+4.Form Auto-Filler 📝
+-Automates form submission on a sample website.
+-Inputs first name, last name, and email, then submits the form.
+
+5.Wikipedia Search Bot 🌐
+-Extracts the number of active Wikipedia editors.
+-Searches for "Python" using the Wikipedia search bar and retrieves results.
+
+Each script demonstrates Selenium WebDriver for web automation, including clicking elements, filling forms, scraping data, and handling interactions. 🚀

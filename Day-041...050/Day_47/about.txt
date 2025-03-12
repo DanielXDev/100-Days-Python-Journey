@@ -1,0 +1,23 @@
+📌 Amazon Price Tracker 🛒
+
+This script automates price tracking for an Amazon product and sends an email alert when the price drops below a set threshold. It uses web scraping to extract real-time pricing data and an SMTP server to send notifications.
+
+🚀 Features:
+-Scrapes Amazon product price and title.
+-Sends an email alert if the price drops below a specified amount.
+-Users can update the price threshold in the script as needed.
+-Uses BeautifulSoup for web scraping.
+-Securely stores credentials with dotenv.
+
+🔧 Tech Stack:
+Python 🐍
+BeautifulSoup (Web Scraping)
+Requests (HTTP Requests)
+SMTP (Email Notifications)
+dotenv (Environment Variables)
+
+📌 How to Use:
+-Clone the repository.
+-Set up a .env file with your email credentials.
+-Update the Amazon product URL and price threshold in the script.
+-Run the script to start tracking!
