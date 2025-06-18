@@ -58,7 +58,7 @@
   Writing more efficient and Pythonic code using comprehensions
   Iterating and transforming data effectively
   
-  🔹 Days 32-38 → Intermediate+ Level
+  🔹 Days 32-39 → Intermediate+ Level
   
   -Email Automation & DateTime
   Sending emails using SMTP (smtplib)
@@ -71,3 +71,13 @@
   -Advanced API Requests
   Sending POST, PUT, DELETE requests
   Handling API responses and working with external data sources
+
+  🔹 Days 40-51 → Intermediate+ Level
+
+  -Web Foundations: HTML & CSS → Understanding the structure of web pages, HTML elements, and CSS styling basics for better web automation.
+  
+  -Web Scraping & Automation → Extracting data from websites using Python, handling dynamic content, and navigating web pages programmatically.
+  
+  -BeautifulSoup for Web Scraping → Parsing HTML and XML documents, locating elements, extracting text, and handling data efficiently.
+  
+  -Selenium for Automation → Automating browser interactions, handling form submissions, clicking buttons, and dealing with dynamic content and CAPTCHAs.
