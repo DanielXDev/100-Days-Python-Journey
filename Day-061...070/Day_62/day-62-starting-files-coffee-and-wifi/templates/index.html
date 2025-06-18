@@ -1,0 +1,226 @@
+{% extends 'base.html' %}
+{% block title %}Coffee and Wifi{% endblock %}
+
+{% block styles %}
+<!-- Keep the original bootstrap loader -->
+{{ super() }}
+<!-- Add Font Awesome and Google Fonts -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Add custom styles -->
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .hero-section {
+        background: linear-gradient(135deg, #8a5a44 0%, #3c2f2f 100%);
+        color: white;
+        border-radius: 15px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        padding: 4rem 2rem;
+        margin-top: 2rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        opacity: 0.1;
+        z-index: 0;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+    }
+
+    .display-3 {
+        font-weight: 700;
+        letter-spacing: -1px;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-lead {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: 2rem;
+    }
+
+    .hero-text {
+        font-size: 1.1rem;
+        margin-bottom: 2.5rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn-main {
+        background: #ffbe0b;
+        color: #472d2d;
+        font-weight: 600;
+        padding: 0.8rem 2rem;
+        border-radius: 50px;
+        border: none;
+        box-shadow: 0 5px 15px rgba(255, 190, 11, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .btn-main:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(255, 190, 11, 0.4);
+        background: #ffd60a;
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #ffbe0b;
+    }
+
+    .feature-card {
+        background: white;
+        border-radius: 12px;
+        padding: 2rem;
+        margin-top: 3rem;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    /* Explicit text styling to ensure visibility */
+    .feature-card h3 {
+        color: #333333;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        display: block;
+    }
+
+    .feature-card p {
+        color: #666666;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        display: block;
+    }
+
+    .footer {
+        margin-top: 4rem;
+        padding: 2rem 0;
+        background: #343a40;
+        color: rgba(255,255,255,0.8);
+    }
+
+    @media (max-width: 768px) {
+        .hero-section {
+            padding: 3rem 1rem;
+        }
+
+        .display-3 {
+            font-size: 2.5rem;
+        }
+
+        .hero-lead {
+            font-size: 1.2rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="hero-section text-center">
+        <div class="hero-content">
+            <h1 class="display-3">
+                <i class="fas fa-mug-hot"></i> Coffee & Wifi <i class="fas fa-laptop"></i>
+            </h1>
+            <p class="hero-lead">Find the perfect workspace with great coffee, reliable wifi, and power outlets.</p>
+            <p class="hero-text">We've curated a collection of the best cafes for digital nomads, remote workers, and coffee enthusiasts who need a productive environment.</p>
+            <a class="btn btn-main btn-lg" href="{{ url_for('cafes') }}" role="button">
+                <i class="fas fa-compass"></i> Explore Cafes
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="feature-card text-center">
+                <div class="feature-icon">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <h3>Fast Wifi</h3>
+                <p>Find cafes with reliable high-speed internet perfect for video calls, uploads, and downloads.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-card text-center">
+                <div class="feature-icon">
+                    <i class="fas fa-plug"></i>
+                </div>
+                <h3>Power Outlets</h3>
+                <p>Never run out of battery again. We highlight cafes with accessible power outlets.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-card text-center">
+                <div class="feature-icon">
+                    <i class="fas fa-coffee"></i>
+                </div>
+                <h3>Quality Coffee</h3>
+                <p>Because productivity starts with a great cup of coffee. We rate the quality of brews.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <a class="btn btn-main btn-lg" href="{{ url_for('cafes') }}" role="button">
+            <i class="fas fa-map-marker-alt"></i> Find My Workspace
+        </a>
+    </div>
+</div>
+
+<footer class="footer text-center">
+    <div class="container">
+        <small>© 2025 Coffee & Wifi | Find your perfect workspace</small>
+    </div>
+</footer>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Wait for DOM to load fully
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        window.addEventListener('scroll', function() {
+            const features = document.querySelectorAll('.feature-card');
+            features.forEach(feature => {
+                const position = feature.getBoundingClientRect();
+                if(position.top < window.innerHeight) {
+                    feature.style.opacity = '1';
+                }
+            });
+        });
+    });
+</script>
+{% endblock %}

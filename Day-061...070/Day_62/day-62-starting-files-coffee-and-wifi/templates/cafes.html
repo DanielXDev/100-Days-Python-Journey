@@ -1,0 +1,255 @@
+{% extends 'base.html' %}
+{% block title %}Coffee Shops & Workspaces{% endblock %}
+
+{% block styles %}
+{{ super() }}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .page-header {
+        background: linear-gradient(135deg, #8a5a44 0%, #3c2f2f 100%);
+        color: white;
+        border-radius: 15px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        padding: 3rem 2rem;
+        margin-bottom: 2.5rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .page-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        opacity: 0.1;
+        z-index: 0;
+    }
+
+    .page-header-content {
+        position: relative;
+        z-index: 1;
+    }
+
+    .cafe-table {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .cafe-table thead {
+        background: #3c2f2f;
+    }
+
+    .table-head {
+        color: white;
+    }
+
+    .cafe-table th {
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        padding: 1rem;
+        border: none;
+    }
+
+    .cafe-table td {
+        padding: 1rem;
+        vertical-align: middle;
+        font-size: 0.95rem;
+        border-color: rgba(0,0,0,0.03);
+    }
+
+    .cafe-table tbody tr {
+        transition: all 0.3s ease;
+        background-color: white;
+    }
+
+    .cafe-table tbody tr:hover {
+        background-color: rgba(255,190,11,0.08);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+    }
+
+    .cafe-table tr:nth-child(even) {
+        background-color: rgba(0,0,0,0.01);
+    }
+
+    .rating {
+        display: flex;
+        align-items: center;
+    }
+
+    .rating-excellent {
+        color: #2ecc71;
+    }
+
+    .rating-good {
+        color: #27ae60;
+    }
+
+    .rating-average {
+        color: #f1c40f;
+    }
+
+    .rating-poor {
+        color: #e74c3c;
+    }
+
+    .back-link {
+        display: inline-flex;
+        align-items: center;
+        color: #3c2f2f;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        margin-top: 1.5rem;
+    }
+
+    .back-link:hover {
+        color: #ffbe0b;
+        transform: translateX(-5px);
+    }
+
+    .back-link i {
+        margin-right: 0.5rem;
+    }
+
+    .cafe-name {
+        font-weight: 600;
+        color: #3c2f2f;
+    }
+
+    .location {
+        display: flex;
+        align-items: center;
+    }
+
+    .location i {
+        color: #e74c3c;
+        margin-right: 0.4rem;
+        font-size: 0.9rem;
+    }
+
+<!--    .hours {-->
+<!--        display: flex;-->
+<!--        align-items: center;-->
+<!--    }-->
+
+    .hours i {
+        color: #3498db;
+        margin-right: 0.4rem;
+        font-size: 0.9rem;
+    }
+
+    .add-cafe-btn {
+        background: #ffbe0b;
+        color: #472d2d;
+        font-weight: 600;
+        padding: 0.8rem 2rem;
+        border-radius: 50px;
+        border: none;
+        box-shadow: 0 5px 15px rgba(255, 190, 11, 0.3);
+        transition: all 0.3s ease;
+        margin-top: 1.5rem;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .add-cafe-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(255, 190, 11, 0.4);
+        background: #ffd60a;
+        color: #472d2d;
+    }
+
+    .add-cafe-btn i {
+        margin-right: 0.5rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="page-header text-center">
+        <div class="page-header-content">
+            <h1><i class="fas fa-coffee"></i> Coffee Workspaces</h1>
+            <p class="lead">Discover the perfect place to work, meet, or relax</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="cafe-table-wrapper">
+                <table class="cafe-table table">
+                    <thead class="table-head">
+                        <tr>
+                            <th>Café Name</th>
+                            <th>Location</th>
+                            <th>Open</th>
+                            <th>Close</th>
+                            <th>Coffee</th>
+                            <th>Wifi</th>
+                            <th>Power</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for cafe in cafes[1:] %}
+                    <tr>
+                        <td class="cafe-name">{{ cafe[0] }}</td>
+                        <td class="location"><i class="fas fa-map-marker-alt"></i> {{ cafe[1] }}</td>
+                        <td class="hours"><i class="far fa-clock"></i> {{ cafe[2] }}</td>
+                        <td class="hours"><i class="far fa-clock"></i> {{ cafe[3] }}</td>
+                        <td>{{ cafe[4] }}</td>
+                        <td>{{ cafe[5] }}</td>
+                        <td>{{ cafe[6] }}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-4 text-center">
+                <a href="{{ url_for('home') }}" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Return to homepage
+                </a>
+
+                <div class="mt-4">
+                    <a href="{{ url_for('add_cafe') }}" class="add-cafe-btn">
+                        <i class="fas fa-plus"></i> Submit a Café
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add smooth animation when table loads
+        const tableRows = document.querySelectorAll('.cafe-table tbody tr');
+        tableRows.forEach((row, index) => {
+            row.style.opacity = '0';
+            row.style.transform = 'translateY(20px)';
+
+            setTimeout(() => {
+                row.style.transition = 'all 0.4s ease';
+                row.style.opacity = '1';
+                row.style.transform = 'translateY(0)';
+            }, 100 + (index * 50));
+        });
+    });
+</script>
+{% endblock %}

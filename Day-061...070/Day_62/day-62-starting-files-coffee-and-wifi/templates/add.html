@@ -1,0 +1,288 @@
+{% extends 'base.html' %}
+{% block title %}Add A New Cafe{% endblock %}
+
+{% block styles %}
+{{ super() }}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .form-header {
+        background: linear-gradient(135deg, #8a5a44 0%, #3c2f2f 100%);
+        color: white;
+        border-radius: 15px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        padding: 2.5rem 2rem;
+        margin-bottom: 2.5rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .form-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        opacity: 0.1;
+        z-index: 0;
+    }
+
+    .form-header-content {
+        position: relative;
+        z-index: 1;
+    }
+
+    .form-card {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+        font-weight: 600;
+        color: #3c2f2f;
+        margin-bottom: 0.5rem;
+    }
+
+    .form-control {
+        border-radius: 8px;
+        border: 1px solid rgba(0,0,0,0.1);
+        padding: 0.8rem;
+        transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+        border-color: #ffbe0b;
+        box-shadow: 0 0 0 3px rgba(255, 190, 11, 0.2);
+    }
+
+    .btn-submit {
+        background: #ffbe0b;
+        color: #472d2d;
+        font-weight: 600;
+        padding: 0.8rem 2rem;
+        border-radius: 50px;
+        border: none;
+        box-shadow: 0 5px 15px rgba(255, 190, 11, 0.3);
+        transition: all 0.3s ease;
+        margin-top: 1rem;
+    }
+
+    .btn-submit:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(255, 190, 11, 0.4);
+        background: #ffd60a;
+    }
+
+    .form-section-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #3c2f2f;
+        margin: 1.5rem 0 1rem 0;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid rgba(0,0,0,0.05);
+    }
+
+    .form-help-text {
+        color: #6c757d;
+        font-size: 0.85rem;
+        margin-top: 0.5rem;
+    }
+
+    .rating-info {
+        font-size: 0.85rem;
+        color: #6c757d;
+        display: block;
+        margin-top: 0.3rem;
+    }
+
+    .back-link {
+        display: inline-flex;
+        align-items: center;
+        color: #3c2f2f;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        margin-top: 1rem;
+    }
+
+    .back-link:hover {
+        color: #ffbe0b;
+        transform: translateX(-5px);
+    }
+
+    .back-link i {
+        margin-right: 0.5rem;
+    }
+
+    /* Custom styles for select boxes and radio buttons */
+    select.form-control {
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%233c2f2f' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 16px 12px;
+        padding-right: 2.5rem;
+    }
+
+    /* Custom styling for form errors */
+    .invalid-feedback {
+        color: #e74c3c;
+        font-size: 0.85rem;
+        margin-top: 0.3rem;
+    }
+
+    .is-invalid {
+        border-color: #e74c3c;
+    }
+
+    .is-invalid:focus {
+        box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+    }
+
+    /* Form card animations */
+    .form-card {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.6s forwards;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .form-header {
+            padding: 2rem 1.5rem;
+        }
+
+        .form-card {
+            padding: 1.5rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="form-header">
+        <div class="form-header-content text-center">
+            <h1><i class="fas fa-plus-circle"></i> Add a New Café</h1>
+            <p class="lead">Share your favorite workspace with our community</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="form-card">
+                {% from "bootstrap/form.html" import render_field %}
+
+                <form method="POST" class="cafe-form">
+                    {{ form.hidden_tag() }}
+
+                    <div class="form-section-title">
+                        <i class="fas fa-store"></i> Café Details
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            {{ render_field(form.cafe, class="form-control", placeholder="e.g. Starbucks") }}
+                            <span class="form-help-text">Enter the café's official name</span>
+                        </div>
+                        <div class="col-md-6">
+                            {{ render_field(form.location, class="form-control", placeholder="e.g. 123 Main St, City") }}
+                            <span class="form-help-text">Full address or neighborhood</span>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            {{ render_field(form.open_time, class="form-control") }}
+                            <span class="form-help-text">When does it open?</span>
+                        </div>
+                        <div class="col-md-6">
+                            {{ render_field(form.close_time, class="form-control") }}
+                            <span class="form-help-text">When does it close?</span>
+                        </div>
+                    </div>
+
+                    <div class="form-section-title mt-4">
+                        <i class="fas fa-star"></i> Ratings
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            {{ render_field(form.coffee, class="form-control") }}
+                            <span class="rating-info">☕ = Poor, ☕☕☕☕☕ = Excellent</span>
+                        </div>
+                        <div class="col-md-4">
+                            {{ render_field(form.wifi, class="form-control") }}
+                            <span class="rating-info">💪 = Poor, 💪💪💪💪💪 = Excellent</span>
+                        </div>
+                        <div class="col-md-4">
+                            {{ render_field(form.power, class="form-control") }}
+                            <span class="rating-info">🔌 = Few, 🔌🔌🔌🔌🔌 = Many</span>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-submit">
+                            <i class="fas fa-paper-plane"></i> Submit Café
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="text-center mb-5">
+                <a href="{{ url_for('cafes') }}" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to all cafes
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Custom validation styling
+        const formInputs = document.querySelectorAll('.form-control');
+
+        formInputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.classList.add('input-focused');
+            });
+
+            input.addEventListener('blur', function() {
+                this.classList.remove('input-focused');
+
+                // Simple validation for required fields
+                if (this.hasAttribute('required') && !this.value) {
+                    this.classList.add('is-invalid');
+                } else {
+                    this.classList.remove('is-invalid');
+                }
+            });
+        });
+    });
+</script>
+{% endblock %}
